@@ -1,6 +1,7 @@
 package com.vita.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,6 @@ public class ModelController {
             List<Model> models = modelService.getAllModels();
             return new ResponseEntity<>(models, HttpStatus.OK);
         } catch (Exception e) {
-            // Log the exception here
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -40,21 +40,20 @@ public class ModelController {
             List<Model> models = modelService.getAllModelsByManuIdAndSegId(segId, manuId);
             return new ResponseEntity<>(models, HttpStatus.OK);
         } catch (Exception e) {
-            // Log the exception here
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
-    @GetMapping("/{modId}")
-    public ResponseEntity<Model> fetchModelById(@PathVariable Long modId) {
+    @GetMapping("/details/{id}")
+    public ResponseEntity<Model> fetchModelById(@PathVariable Long id) {
         try {
-            Model model = modelService.getModelsById(modId);
-            return new ResponseEntity<>(model, HttpStatus.OK);
+            Optional<Model> model = modelService.getModelById(id);
+            return model.map(ResponseEntity::ok)
+                        .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
         } catch (Exception e) {
-            // Log the exception here
             e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }

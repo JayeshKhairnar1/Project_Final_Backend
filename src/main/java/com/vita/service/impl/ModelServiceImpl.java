@@ -1,8 +1,11 @@
 package com.vita.service.impl;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.vita.model.Model;
 import com.vita.repositoty.ModelRepository;
 import com.vita.service.ModelService;
@@ -24,7 +27,7 @@ public class ModelServiceImpl implements ModelService {
     }
 
     @Override
-    public Model getModelsById(long id) {
-        return modelRepository.findById(id).orElse(null); // Handle case when Model is not found
+    public Optional<Model> getModelById(long id) {
+        return modelRepository.findByIdWithDetails(id);
     }
 }

@@ -30,5 +30,12 @@ public class AlternateComponentServiceimpl implements  AlternateComponentService
 		AlternateComponent component=repository.findAlternateCompByModelIdAndCompId(mod_id, comp_id);
 		return component;
 	}
+
+
+	@Override
+	public List<AlternateComponent> getAllAltComp(int mod_id) {
+		
+		return repository.findAllUsingId(mod_id);
+	}
 	
 }

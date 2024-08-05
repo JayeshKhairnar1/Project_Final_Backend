@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -33,7 +34,7 @@ public class SegmentController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		}
-  /*
+ /* 
     @GetMapping("/{id}")
     public ResponseEntity<Segment> getSegmentById(@PathVariable int id) {
     	Segment segment = seg_service.getSegmentById(id);
@@ -43,5 +44,5 @@ public class SegmentController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-  */  
+   */
 }

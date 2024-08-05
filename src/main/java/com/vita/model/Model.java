@@ -23,6 +23,18 @@ public class Model {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "seg_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Segment segment;
+
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "manu_id", nullable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Manufacturer manufacturer;
+
+    /*
   //removed eager type lazy from here because it was asking for jackson dependency and @Json Ignore Annotation
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "segId", nullable = false)
@@ -33,7 +45,7 @@ public class Model {
     @JoinColumn(name = "manuId", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Manufacturer manufacturer;
-
+*/
     @Column(nullable = false)
     private String modName;
 

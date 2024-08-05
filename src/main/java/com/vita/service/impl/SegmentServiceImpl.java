@@ -13,10 +13,24 @@ import com.vita.service.SegmentService;
 public class SegmentServiceImpl implements SegmentService {
 	@Autowired
 	private SegmentRepository repo;
+	/*
 	@Override
 	public List<Segment> getAllSegments() {
 		
 		return repo.findAll();
+	}
+	*/
+	
+	@Override
+	public List<Segment> getAllSegments() {
+		// TODO Auto-generated method stub
+		return repo.findAll();
+	}
+
+	@Override
+	public Segment getSegmentById(int id) {
+		// TODO Auto-generated method stub
+		return (Segment) repo.findAll();
 	}
 
 }

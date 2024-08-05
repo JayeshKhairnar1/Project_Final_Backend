@@ -16,7 +16,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 enum CompType {
-	S, C, I, E 
+	S, A, I, E 
 }
 
 enum IsConfigurable {

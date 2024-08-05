@@ -65,6 +65,12 @@ public class AlternateComponent
 		return deltaPrice;
 	}
 
+	@Override
+	public String toString() {
+		return "AlternateComponent [id=" + id + ", deltaPrice=" + deltaPrice + ", modId=" + modId + ", compId=" + compId
+				+ "]";
+	}
+
 
 
 }

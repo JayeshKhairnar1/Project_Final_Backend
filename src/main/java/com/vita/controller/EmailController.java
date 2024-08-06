@@ -24,5 +24,12 @@ public class EmailController {
         String email = emailDetails.getSendTo();
         return emailService.loginEmail(email, SUBJECT, BODY);    
     }
+    
+    @PostMapping("/mailInvoice")
+    public String sendInvoice(@RequestBody EmailDetails emailDetails)
+    {	
+    	String email= emailDetails.getSendTo();
+    	return emailService.invoiceEmail(email, SUBJECT, BODY);
+    }
 }
  

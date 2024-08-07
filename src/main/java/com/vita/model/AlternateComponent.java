@@ -38,6 +38,9 @@ public class AlternateComponent
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private Component compId;
 	
+	private Long alt_comp_Id;
+	
+	
 	/*
 	@ManyToOne(fetch = FetchType.EAGER, optional = false)
 	@JoinColumn(name = "alt_comp_id", nullable = false)
@@ -65,11 +68,21 @@ public class AlternateComponent
 		return deltaPrice;
 	}
 
+	public Long getAlt_comp_Id() {
+		return alt_comp_Id;
+	}
+
+	public void setAlt_comp_Id(Long alt_comp_Id) {
+		this.alt_comp_Id = alt_comp_Id;
+	}
+
 	@Override
 	public String toString() {
 		return "AlternateComponent [id=" + id + ", deltaPrice=" + deltaPrice + ", modId=" + modId + ", compId=" + compId
-				+ "]";
+				+ ", alt_comp_Id=" + alt_comp_Id + "]";
 	}
+
+	
 
 
 

@@ -56,4 +56,7 @@ public class ModelController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    //@GetMapping("/{id}")
+    //public ResponseEntity<Model> fetchprice(@PathVariable Long id) 
+    
 }

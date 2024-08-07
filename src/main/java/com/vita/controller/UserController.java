@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,5 +41,18 @@ public class UserController {
         } else {
             return new ResponseEntity<>("Invalid user ID or password", HttpStatus.UNAUTHORIZED);
         }
+    }
+    
+    @GetMapping("/DataForInvoicPrinting/{userid}")
+    public User userInfoForInvoice(@PathVariable String userid){
+    	User user = userService.getUserById(userid);
+    	return user;
+    	/*
+    	if (user != null ) {
+            return new ResponseEntity<>("Fetched successful", HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("Error Fetching", HttpStatus.NOT_FOUND);
+        }*/
+    	
     }
 }

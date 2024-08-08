@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.vita.model.Invoice;
 import com.vita.service.impl.InvoiceServiceImpl;
-import com.vita.utils.invoicePDFExporter;
+import com.vita.utils.InvoicePDFExporter;
 
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -65,7 +65,7 @@ public class InvoiceController {
 		        
 		        List<Invoice> products = invoiceService.getAllInvoice();
 		         
-		        invoicePDFExporter exporter = new invoicePDFExporter(products);
+		        InvoicePDFExporter exporter = new InvoicePDFExporter(products);
 		        try {
 					exporter.export(response);
 				} catch (Exception e) {

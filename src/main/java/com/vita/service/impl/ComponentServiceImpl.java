@@ -1,12 +1,12 @@
 package com.vita.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.vita.model.Component;
 import com.vita.repositoty.ComponentRepository;
-
-import java.util.List;
 
 @Service
 public class ComponentServiceImpl {

@@ -23,6 +23,7 @@ enum IsConfigurable {
 	Y, N 
 }
 
+
 @Entity
 @Table(name = "vehicles")
 public class Vehicle {

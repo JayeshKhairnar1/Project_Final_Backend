@@ -1,6 +1,4 @@
 package com.vita.service;
-import org.springframework.http.ResponseEntity;
-
 import com.vita.model.User;
 
 

@@ -1,5 +1,6 @@
 package com.vita.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,8 +17,12 @@ public class CarDescription {
     private String carName;
     private String path;
     
+   
     @Lob
-    private String description;  // Use @Lob to indicate this is a large object
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
+     // Use @Lob to indicate this is a large object
 
     // Getters and Setters
 

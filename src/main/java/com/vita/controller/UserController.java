@@ -43,16 +43,13 @@ public class UserController {
         }
     }
     
-    @GetMapping("/DataForInvoicPrinting/{userid}")
+    @GetMapping("/userForInvoice/{userid}")
     public User userInfoForInvoice(@PathVariable String userid){
     	User user = userService.getUserById(userid);
+   
     	return user;
-    	/*
-    	if (user != null ) {
-            return new ResponseEntity<>("Fetched successful", HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>("Error Fetching", HttpStatus.NOT_FOUND);
-        }*/
     	
     }
+    
+   
 }

@@ -50,7 +50,7 @@ public class EmailServiceImpl implements EmailService {
 
     
     @Override
-	public String invoiceEmail(String toEmailId, String subject, String body) {
+	public String invoiceEmail(String toEmailId, String subject, String body, String invoiceName) {
 
 		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 		MimeMessageHelper helper;
@@ -59,7 +59,11 @@ public class EmailServiceImpl implements EmailService {
 			helper.setTo(toEmailId);
 			helper.setSubject(subject);
 			helper.setText(body);
-			File attachment = new File("C:/Users/Lenovo/Downloads/invoice.pdf");
+			
+			String path="C:/Users/Lenovo/Downloads/"+invoiceName+".pdf";
+			System.out.println(path+"  #.............................path is");
+			File attachment = new File(path);
+			
 			if (attachment != null && attachment.exists()) 
 			{
 				helper.addAttachment(attachment.getName(), attachment);

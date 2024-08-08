@@ -29,7 +29,9 @@ public class EmailController {
     public String sendInvoice(@RequestBody EmailDetails emailDetails)
     {	
     	String email= emailDetails.getSendTo();
-    	return emailService.invoiceEmail(email, SUBJECT, BODY);
+    	String invoiceName= emailDetails.getInvoiceName();
+    	System.out.println("sending invoice on email started................................................................");
+    	return emailService.invoiceEmail(email, SUBJECT, BODY, invoiceName);
     }
 }
  

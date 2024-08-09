@@ -47,10 +47,49 @@ public class EmailServiceImpl implements EmailService {
         return "Email sent successfully";
     }
 
+    public String invoiceEmail(String toEmailId, String subject, String body, String path) {
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+        MimeMessageHelper helper;
+        
+        try {
+            helper = new MimeMessageHelper(mimeMessage, true);
+            helper.setTo(toEmailId);
+            helper.setSubject(subject);
+            helper.setText(body);
+            
+            // Log the attachment path for debugging
+            System.out.println("Path for attachment: " + path);
+            
+            File attachment = new File(path);
+            
+            // Check if the file exists and is not null
+            if (attachment != null && attachment.exists()) {
+                helper.addAttachment(attachment.getName(), attachment);
+            } else {
+                // Log an error and return a message if the file doesn't exist
+                System.err.println("Attachment file does not exist at path: " + path);
+                return "Attachment file does not exist";
+            }
+        } catch (Exception e) {
+            // Print the stack trace and return a message if an error occurs
+            e.printStackTrace();
+            return "Error in sending mail: " + e.getMessage();
+        }
+
+        try {
+            javaMailSender.send(mimeMessage);
+        } catch (Exception e) {
+            // Print the stack trace and return a message if an error occurs during sending
+            e.printStackTrace();
+            return "Error in sending mail: " + e.getMessage();
+        }
+
+        return "Invoice email sent successfully";
+    }
 
     
-    @Override
-	public String invoiceEmail(String toEmailId, String subject, String body, String invoiceName) {
+ /* ours---------
+	public String invoiceEmail(String toEmailId, String subject, String body, String path) {
 
 		MimeMessage mimeMessage = javaMailSender.createMimeMessage();
 		MimeMessageHelper helper;
@@ -60,7 +99,7 @@ public class EmailServiceImpl implements EmailService {
 			helper.setSubject(subject);
 			helper.setText(body);
 			
-			String path="C:/Users/Lenovo/Downloads/"+invoiceName+".pdf";
+			//String path="C:/Users/Lenovo/Downloads/"+invoiceName+".pdf";
 			System.out.println(path+"  #.............................path is");
 			File attachment = new File(path);
 			
@@ -78,4 +117,5 @@ public class EmailServiceImpl implements EmailService {
 
 		return "Invoice email sent successfully";
 	}
+	*/
 }

@@ -31,6 +31,6 @@ public class Component {
 		this.compName = compName;
 	}
 
-    // Getters and setters
+   
 	
 }

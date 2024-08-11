@@ -22,10 +22,6 @@ public class CarDescription {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-     // Use @Lob to indicate this is a large object
-
-    // Getters and Setters
-
     public Long getId() {
         return id;
     }

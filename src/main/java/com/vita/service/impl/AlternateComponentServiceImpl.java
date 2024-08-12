@@ -24,8 +24,8 @@ public class AlternateComponentServiceImpl implements AlternateComponentService 
     }
 
     
-    public List<Integer> findByModelIdAndCompId(int mod_id, int comp_id) {
-        return repository.findAlternateCompIdsByModelIdAndCompId(mod_id, comp_id);
+    public List<Integer>  extractArrayForAlternateId(int mod_id, int comp_id) {
+        return repository. extractArrayForAlternateId(mod_id, comp_id);
     }
 
     @Override

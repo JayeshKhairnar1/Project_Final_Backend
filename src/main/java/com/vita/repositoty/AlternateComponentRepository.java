@@ -33,7 +33,7 @@ public interface AlternateComponentRepository extends JpaRepository<AlternateCom
 	List<Map<String,Object>> findByModelIdAndCompId(@Param("mod_id") int mod_id, @Param("comp_id") int comp_id);
 
 	@Query(nativeQuery = true, value = "SELECT alt_comp_id FROM alternate_components WHERE mod_id = :mod_id AND comp_id = :comp_id")
-	List<Integer> findAlternateCompIdsByModelIdAndCompId(@Param("mod_id") int mod_id, @Param("comp_id") int comp_id);
+	List<Integer>  extractArrayForAlternateId(@Param("mod_id") int mod_id, @Param("comp_id") int comp_id);
 
 	
 	@Query(nativeQuery=true, value="select * from alternate_components where mod_id=:mod_id ")

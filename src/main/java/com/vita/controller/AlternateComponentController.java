@@ -25,10 +25,10 @@ public class AlternateComponentController {
 	AlternateComponentService service;
 
 	@GetMapping(value = "/alt/{modId}/{compId}")
-    public ResponseEntity<List<Integer>> showAltenatedComponents(
+    public ResponseEntity<List<Integer>> extractArrayForAlternateId(
             @PathVariable(value = "modId") int mod_id,
             @PathVariable(value = "compId") int comp_id) {
-        List<Integer> altCompIds = service.findByModelIdAndCompId(mod_id, comp_id);
+        List<Integer> altCompIds = service. extractArrayForAlternateId(mod_id, comp_id);
         return new ResponseEntity<>(altCompIds, HttpStatus.OK);
     }
 	
@@ -40,6 +40,7 @@ public class AlternateComponentController {
 		return service.getAllAltComp(seg_id);
 	}
 
+	 //extracting delta price by frontend array created after selection from drop down
     @GetMapping("{modId}/{compId}")
     public List<Map<String, Object>> getDeltaPriceAndNameByArray(@PathVariable(value="modId") int mod_id, @PathVariable(value="compId") int comp_id) {
         return service.getDeltaPriceAndNameByArray(mod_id, comp_id);

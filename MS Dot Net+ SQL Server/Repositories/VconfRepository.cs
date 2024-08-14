@@ -21,7 +21,8 @@ namespace Grp4.repositories
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
 
-        public Db
+        public DbSet<AlternateComponent> AlternateComponents { get; set; }
+        public DbSet<CarDescription> CarDescriptions { get; set; }  
 
     }
 }

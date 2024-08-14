@@ -5,37 +5,37 @@
 namespace VconfigDotnet.Migrations
 {
     /// <inheritdoc />
-    public partial class Second : Migration
+    public partial class StarterTemplate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "CarDescriptions",
+                name: "car_description",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CarName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Path = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    CarName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Path = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CarDescriptions", x => x.Id);
+                    table.PrimaryKey("PK_car_description", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Components",
+                name: "components",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CompName = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    CompName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Components", x => x.Id);
+                    table.PrimaryKey("PK_components", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -44,7 +44,7 @@ namespace VconfigDotnet.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    AltCompId = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    AltCompId = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
                     ModelId = table.Column<int>(type: "int", nullable: false),
                     ModelPrice = table.Column<int>(type: "int", nullable: false),
                     OrderedQty = table.Column<int>(type: "int", nullable: false),
@@ -57,93 +57,93 @@ namespace VconfigDotnet.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Segments",
+                name: "segments",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SegName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    SegName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Segments", x => x.Id);
+                    table.PrimaryKey("PK_segments", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "user",
                 columns: table => new
                 {
-                    Userid = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    AddressLine1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AddressLine2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CompanyName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GstNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PinCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    State = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telephone = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Username = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    UserId = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    AddressLine1 = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    AddressLine2 = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    City = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    CompanyName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    GstNumber = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    PinCode = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    State = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Telephone = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                    Username = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Userid);
+                    table.PrimaryKey("PK_user", x => x.UserId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Manufacturers",
+                name: "manufacturers",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ManuName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ManuName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     SegId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Manufacturers", x => x.Id);
+                    table.PrimaryKey("PK_manufacturers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Manufacturers_Segments_SegId",
+                        name: "FK_manufacturers_segments_SegId",
                         column: x => x.SegId,
-                        principalTable: "Segments",
+                        principalTable: "segments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Models",
+                name: "models",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImagePath = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     MinQty = table.Column<int>(type: "int", nullable: false),
-                    ModName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ModName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     Price = table.Column<int>(type: "int", nullable: false),
-                    SafetyRating = table.Column<int>(type: "int", nullable: true),
+                    SafetyRating = table.Column<int>(type: "int", nullable: false),
                     ManuId = table.Column<long>(type: "bigint", nullable: false),
                     SegId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Models", x => x.Id);
+                    table.PrimaryKey("PK_models", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Models_Manufacturers_ManuId",
+                        name: "FK_models_manufacturers_ManuId",
                         column: x => x.ManuId,
-                        principalTable: "Manufacturers",
+                        principalTable: "manufacturers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Models_Segments_SegId",
+                        name: "FK_models_segments_SegId",
                         column: x => x.SegId,
-                        principalTable: "Segments",
+                        principalTable: "segments",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "AlternateComponents",
+                name: "alternate_components",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
@@ -155,82 +155,82 @@ namespace VconfigDotnet.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AlternateComponents", x => x.Id);
+                    table.PrimaryKey("PK_alternate_components", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AlternateComponents_Components_CompId",
+                        name: "FK_alternate_components_components_CompId",
                         column: x => x.CompId,
-                        principalTable: "Components",
+                        principalTable: "components",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_AlternateComponents_Models_ModId",
+                        name: "FK_alternate_components_models_ModId",
                         column: x => x.ModId,
-                        principalTable: "Models",
+                        principalTable: "models",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Vehicles",
+                name: "vehicles",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CompType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsConfigurable = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CompType = table.Column<string>(type: "enum('A','E','I','S')", nullable: false),
+                    IsConfigurable = table.Column<string>(type: "enum('N','Y')", nullable: false),
                     CompId = table.Column<long>(type: "bigint", nullable: false),
                     ModId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vehicles", x => x.Id);
+                    table.PrimaryKey("PK_vehicles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Vehicles_Components_CompId",
+                        name: "FK_vehicles_components_CompId",
                         column: x => x.CompId,
-                        principalTable: "Components",
+                        principalTable: "components",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Vehicles_Models_ModId",
+                        name: "FK_vehicles_models_ModId",
                         column: x => x.ModId,
-                        principalTable: "Models",
+                        principalTable: "models",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_AlternateComponents_CompId",
-                table: "AlternateComponents",
+                name: "IX_alternate_components_CompId",
+                table: "alternate_components",
                 column: "CompId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_AlternateComponents_ModId",
-                table: "AlternateComponents",
+                name: "IX_alternate_components_ModId",
+                table: "alternate_components",
                 column: "ModId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Manufacturers_SegId",
-                table: "Manufacturers",
+                name: "IX_manufacturers_SegId",
+                table: "manufacturers",
                 column: "SegId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Models_ManuId",
-                table: "Models",
+                name: "IX_models_ManuId",
+                table: "models",
                 column: "ManuId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Models_SegId",
-                table: "Models",
+                name: "IX_models_SegId",
+                table: "models",
                 column: "SegId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Vehicles_CompId",
-                table: "Vehicles",
+                name: "IX_vehicles_CompId",
+                table: "vehicles",
                 column: "CompId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Vehicles_ModId",
-                table: "Vehicles",
+                name: "IX_vehicles_ModId",
+                table: "vehicles",
                 column: "ModId");
         }
 
@@ -238,31 +238,31 @@ namespace VconfigDotnet.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AlternateComponents");
+                name: "alternate_components");
 
             migrationBuilder.DropTable(
-                name: "CarDescriptions");
+                name: "car_description");
 
             migrationBuilder.DropTable(
                 name: "invoices");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "user");
 
             migrationBuilder.DropTable(
-                name: "Vehicles");
+                name: "vehicles");
 
             migrationBuilder.DropTable(
-                name: "Components");
+                name: "components");
 
             migrationBuilder.DropTable(
-                name: "Models");
+                name: "models");
 
             migrationBuilder.DropTable(
-                name: "Manufacturers");
+                name: "manufacturers");
 
             migrationBuilder.DropTable(
-                name: "Segments");
+                name: "segments");
         }
     }
 }

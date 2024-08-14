@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VconfigDotnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecc2686f23a5c118c1536f938c56c547af20f992")]
 [assembly: System.Reflection.AssemblyProductAttribute("VconfigDotnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VconfigDotnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,11 +7,11 @@ namespace Grp4.models
     public class Segment
     {
         [Key]
-       // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
         [MaxLength(255)]
-        public string SegName { get; set; }
+        public string Seg_Name { get; set; }
     }
 }

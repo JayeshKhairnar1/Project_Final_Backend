@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\VconfigDotnet.csproj": {}
+    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net+ SQL Server\\VconfigDotnet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\VconfigDotnet.csproj": {
+    "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net+ SQL Server\\VconfigDotnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\VconfigDotnet.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net+ SQL Server\\VconfigDotnet.csproj",
         "projectName": "VconfigDotnet",
-        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\VconfigDotnet.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net+ SQL Server\\VconfigDotnet.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net+ SQL Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

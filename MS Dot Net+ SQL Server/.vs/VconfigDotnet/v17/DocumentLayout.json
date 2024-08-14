@@ -1,0 +1,190 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\repositories\\vconfrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:repositories\\vconfrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\segment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\segment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\component.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\cardescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\cardescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|c:\\users\\lenovo\\onedrive\\desktop\\dot net project\\vconfigdotnet\\models\\alternatecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E401BFC4-61AD-4236-B9DC-1182CE425D56}|VconfigDotnet.csproj|solutionrelative:models\\alternatecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VconfRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Repositories\\VconfRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\VconfRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Repositories\\VconfRepository.cs",
+              "RelativeToolTip": "Repositories\\VconfRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:07:19.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "Models\\Vehicle.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Vehicle.cs",
+              "RelativeToolTip": "Models\\Vehicle.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:53.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:47.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Segment.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Segment.cs",
+              "RelativeDocumentMoniker": "Models\\Segment.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Segment.cs",
+              "RelativeToolTip": "Models\\Segment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:40.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Model.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Model.cs",
+              "RelativeDocumentMoniker": "Models\\Model.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Model.cs",
+              "RelativeToolTip": "Models\\Model.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:35.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Manufacturer.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Manufacturer.cs",
+              "RelativeDocumentMoniker": "Models\\Manufacturer.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Manufacturer.cs",
+              "RelativeToolTip": "Models\\Manufacturer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:30.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Invoice.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Invoice.cs",
+              "RelativeDocumentMoniker": "Models\\Invoice.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Invoice.cs",
+              "RelativeToolTip": "Models\\Invoice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:25.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Component.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Component.cs",
+              "RelativeDocumentMoniker": "Models\\Component.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\Component.cs",
+              "RelativeToolTip": "Models\\Component.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:20.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CarDescription.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\CarDescription.cs",
+              "RelativeDocumentMoniker": "Models\\CarDescription.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\CarDescription.cs",
+              "RelativeToolTip": "Models\\CarDescription.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:14.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AlternateComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\AlternateComponent.cs",
+              "RelativeDocumentMoniker": "Models\\AlternateComponent.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Dot Net Project\\VconfigDotnet\\Models\\AlternateComponent.cs",
+              "RelativeToolTip": "Models\\AlternateComponent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T10:06:00.29Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

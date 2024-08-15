@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\models\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:models\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\services\\manufacturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:services\\manufacturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\controllers\\manufacturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:controllers\\manufacturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\services\\imanufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:services\\imanufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\models\\segment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:models\\segment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ManufacturerController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Controllers\\ManufacturerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ManufacturerController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Controllers\\ManufacturerController.cs",
+              "RelativeToolTip": "Controllers\\ManufacturerController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAkwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T06:28:21.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IManufacturer.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\IManufacturer.cs",
+              "RelativeDocumentMoniker": "Services\\IManufacturer.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\IManufacturer.cs*",
+              "RelativeToolTip": "Services\\IManufacturer.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T06:24:41.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ManufacturerService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\ManufacturerService.cs",
+              "RelativeDocumentMoniker": "Services\\ManufacturerService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\ManufacturerService.cs*",
+              "RelativeToolTip": "Services\\ManufacturerService.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAkwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T06:24:32.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Segment.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\Segment.cs",
+              "RelativeDocumentMoniker": "Models\\Segment.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\Segment.cs",
+              "RelativeToolTip": "Models\\Segment.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T06:23:13.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Manufacturer.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\Manufacturer.cs",
+              "RelativeDocumentMoniker": "Models\\Manufacturer.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\Manufacturer.cs*",
+              "RelativeToolTip": "Models\\Manufacturer.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T06:22:52.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T06:22:39.391Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

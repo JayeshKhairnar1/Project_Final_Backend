@@ -17,8 +17,9 @@ const DropdownPage = () => {
     const [myModelId, setMyModelId] = useState(null); // New state for myModelId
  
     useEffect(() => {
-        // Fetch segments from API
-        fetch('http://localhost:8080/api/segments/')
+       
+      //Java API  fetch('http://localhost:8080/api/segments/')
+      fetch('http://localhost:5248/api/Segments')
             .then(response => response.json())
             .then(data => {
                 setSegments(data);
@@ -28,8 +29,9 @@ const DropdownPage = () => {
 
     useEffect(() => {
         if (selectedSegment) {
-            // Fetch manufacturers based on selected segment
-            fetch(`http://localhost:8080/api/manufacturers/${selectedSegment.id}`)
+            //Java API    fetch(`http://localhost:8080/api/manufacturers/${selectedSegment.id}`)
+           
+            fetch(`http://localhost:5248/api/Manufacturer/${selectedSegment.id}`)
                 .then(response => response.json())
                 .then(data => {
                     setManufacturers(data);
@@ -41,7 +43,8 @@ const DropdownPage = () => {
     useEffect(() => {
         if (selectedManufacturer) {
             // Fetch models based on selected manufacturer
-            fetch(`http://localhost:8080/api/models/${selectedSegment.id}/${selectedManufacturer.id}`)
+            //fetch(`http://localhost:8080/api/models/${selectedSegment.id}/${selectedManufacturer.id}`)
+            fetch(`http://localhost:5248/api/models/${selectedSegment.id}/${selectedManufacturer.id}`)
                 .then(response => response.json())
                 .then(data => {
                     setModels(data);

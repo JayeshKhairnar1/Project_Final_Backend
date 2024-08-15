@@ -1,21 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DotNetProject.Models;
-
-public partial class Vehicle
+namespace DotNetProject.Models
 {
-    public long Id { get; set; }
+    [Table("vehicles")]
+    public partial class Vehicle
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set; }
 
-    public string CompType { get; set; } = null!;
+        [Required]
+        [MaxLength(10)]
+        [Column("comp_type")]
+        public string CompType { get; set; } = null!;
 
-    public string IsConfigurable { get; set; } = null!;
+        [Required]
+        [MaxLength(10)]
+        [Column("is_configurable")]
+        public string IsConfigurable { get; set; } = null!;
 
-    public long CompId { get; set; }
+        [ForeignKey(nameof(CompId))]
+        public virtual Component Component { get; set; } = null!;
 
-    public long ModId { get; set; }
+        [ForeignKey(nameof(ModId))]
+        public virtual Model Model { get; set; } = null!;
 
-    public virtual Component Comp { get; set; } = null!;
+        [Required]
+        [Column("comp_id")]
+        public long CompId { get; set; }
 
-    public virtual Model Mod { get; set; } = null!;
+        [Required]
+        [Column("mod_id")]
+        public long ModId { get; set; }
+    }
 }

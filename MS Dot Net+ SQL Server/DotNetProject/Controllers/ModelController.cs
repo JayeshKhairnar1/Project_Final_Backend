@@ -17,7 +17,7 @@ namespace DotNetProject.Controllers
             _modelService = modelService;
         }
 
-        [HttpGet("")]
+        [HttpGet("/all")]
         public async Task<IActionResult> GetAllModels()
         {
             try

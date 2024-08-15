@@ -1,15 +1,24 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
-namespace DotNetProject.Models;
-
-public partial class Component
+namespace DotNetProject.Models
 {
-    public long Id { get; set; }
+    [Table("components")]
+    public partial class Component
+    {
+        [JsonPropertyName("id")]
+        public long Id { get; set; }
 
-    public string? CompName { get; set; }
+        [JsonPropertyName("comp_name")]
+        [Column("comp_name")]
+        public string? CompName { get; set; }
 
-    public virtual ICollection<AlternateComponent> AlternateComponents { get; } = new List<AlternateComponent>();
+        [JsonIgnore]
+        public virtual ICollection<AlternateComponent> AlternateComponents { get; } = new List<AlternateComponent>();
 
-    public virtual ICollection<Vehicle> Vehicles { get; } = new List<Vehicle>();
+        [JsonIgnore]
+        public virtual ICollection<Vehicle> Vehicles { get; } = new List<Vehicle>();
+    }
 }

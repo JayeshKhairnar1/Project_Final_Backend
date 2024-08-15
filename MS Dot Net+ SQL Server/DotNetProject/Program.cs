@@ -19,7 +19,10 @@ namespace DotNetProject
             builder.Services.AddScoped<ISegment, SegmentService>();
             builder.Services.AddScoped<IManufacturer, ManufacturerService>();
             builder.Services.AddScoped<IModel, ModelService>();
-          
+            builder.Services.AddScoped<ICarDescription, CarDescriptionService>();
+           // builder.Services.AddScoped<IVehicle,VehicleService>();  
+            builder.Services.AddScoped<IComponent, ComponentService>();
+            builder.Services.AddScoped<IAlternateComponent, AlternateComponentService>();
 
             // Add controllers
             builder.Services.AddControllers();

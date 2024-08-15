@@ -1,0 +1,153 @@
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.csproj.AssemblyReference.cache
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.AssemblyInfoInputs.cache
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.AssemblyInfo.cs
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\appsettings.json
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\VconfigDotnet.exe
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\VconfigDotnet.deps.json
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\VconfigDotnet.runtimeconfig.json
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\VconfigDotnet.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\VconfigDotnet.pdb
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\staticwebassets\msbuild.VconfigDotnet.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\staticwebassets\msbuild.build.VconfigDotnet.props
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.VconfigDotnet.props
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.VconfigDotnet.props
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\scopedcss\bundle\VconfigDotnet.styles.css
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigD.4611D146.Up2Date
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\refint\VconfigDotnet.dll
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.pdb
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\VconfigDotnet.genruntimeconfig.cache
+C:\Users\Lenovo\OneDrive\Desktop\Dot Net Project\VconfigDotnet\obj\Debug\net7.0\ref\VconfigDotnet.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.csproj.AssemblyReference.cache
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.AssemblyInfoInputs.cache
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.AssemblyInfo.cs
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.sourcelink.json
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\appsettings.json
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\VconfigDotnet.exe
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\VconfigDotnet.deps.json
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\VconfigDotnet.runtimeconfig.json
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\VconfigDotnet.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\VconfigDotnet.pdb
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.OpenApi.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\staticwebassets\msbuild.VconfigDotnet.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\staticwebassets\msbuild.build.VconfigDotnet.props
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.VconfigDotnet.props
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.VconfigDotnet.props
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\scopedcss\bundle\VconfigDotnet.styles.css
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigD.4611D146.Up2Date
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\refint\VconfigDotnet.dll
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.pdb
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\VconfigDotnet.genruntimeconfig.cache
+C:\Users\Lenovo\OneDrive\Desktop\Vehicle Configurator Project\MS Dot Net+ SQL Server\obj\Debug\net7.0\ref\VconfigDotnet.dll

@@ -21,10 +21,10 @@ public class VehicleController {
 	@Autowired
     private VehicleService vehicleService;
     
-    @GetMapping(value = "/{compType}/{id}")
-    public ResponseEntity<List<?>> getVehicleByID(@PathVariable char compType, @PathVariable long id) {
+    @GetMapping(value = "/{compType}/{modid}")
+    public ResponseEntity<List<?>> getVehicleByID(@PathVariable char compType, @PathVariable long modid) {
         try {
-            List<?> components = vehicleService.getCompByModelID(id, compType);
+            List<?> components = vehicleService.getCompByModelID(modid, compType);
             return new ResponseEntity<>(components, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);

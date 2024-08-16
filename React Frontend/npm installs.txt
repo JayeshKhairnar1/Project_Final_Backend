@@ -2,5 +2,7 @@ npm install jspdf html2canvas
 npm install react-bootstrap bootstrap
 npm install react-i18next i18next
 npm install jspdf html2canvas
+npm install jsbarcode
+
 ----
 

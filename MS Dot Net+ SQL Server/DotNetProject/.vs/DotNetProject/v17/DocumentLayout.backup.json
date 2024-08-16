@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\services\\componentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:services\\componentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\services\\ivehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:services\\ivehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\services\\segmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:services\\segmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\services\\alternatecomponentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:services\\alternatecomponentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\repositories\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:repositories\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\models\\cardescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:models\\cardescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|c:\\users\\lenovo\\onedrive\\desktop\\vehicle configurator project\\ms dot net\u002B sql server\\dotnetproject\\services\\ialternatecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75C08EDA-0E11-460A-83F1-88F83E3D7379}|DotNetProject.csproj|solutionrelative:services\\ialternatecomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAhwBYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T15:18:58.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IVehicle.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\IVehicle.cs",
-              "RelativeDocumentMoniker": "Services\\IVehicle.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\IVehicle.cs",
-              "RelativeToolTip": "Services\\IVehicle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T15:18:37.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SegmentService.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\SegmentService.cs",
-              "RelativeDocumentMoniker": "Services\\SegmentService.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\SegmentService.cs",
-              "RelativeToolTip": "Services\\SegmentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T15:18:13.458Z",
+              "WhenOpened": "2024-08-16T10:20:05.403Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Vehicle.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\Vehicle.cs",
-              "RelativeDocumentMoniker": "Models\\Vehicle.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\Vehicle.cs",
-              "RelativeToolTip": "Models\\Vehicle.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBoAAAA5AAAAAAAAAA==",
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T15:17:43.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Repositories\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Repositories\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Repositories\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Repositories\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T15:17:18.468Z",
+              "WhenOpened": "2024-08-16T10:17:05.638Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CarDescription.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\CarDescription.cs",
-              "RelativeDocumentMoniker": "Models\\CarDescription.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\CarDescription.cs",
-              "RelativeToolTip": "Models\\CarDescription.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "AlternateComponentService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\AlternateComponentService.cs",
+              "RelativeDocumentMoniker": "Services\\AlternateComponentService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\AlternateComponentService.cs",
+              "RelativeToolTip": "Services\\AlternateComponentService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T15:17:00.276Z",
+              "WhenOpened": "2024-08-16T10:13:41.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAlternateComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\IAlternateComponent.cs",
+              "RelativeDocumentMoniker": "Services\\IAlternateComponent.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\IAlternateComponent.cs",
+              "RelativeToolTip": "Services\\IAlternateComponent.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T10:13:37.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ComponentService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\ComponentService.cs",
+              "RelativeDocumentMoniker": "Services\\ComponentService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\ComponentService.cs",
+              "RelativeToolTip": "Services\\ComponentService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAUwBgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T10:13:32.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T09:46:48.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\Vehicle Configurator Project\\MS Dot Net\u002B SQL Server\\DotNetProject\\Models\\User.cs*",
+              "RelativeToolTip": "Models\\User.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T09:44:59.066Z",
               "EditorCaption": ""
             }
           ]

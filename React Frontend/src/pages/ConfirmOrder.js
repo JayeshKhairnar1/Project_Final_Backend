@@ -3,10 +3,12 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import logo from '../assets/Extra Images/VitaLogo.png'; 
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import Barcode from 'react-barcode';
 
 const ConfirmOrder = () => {
   const [userData, setUserData] = useState(null);
   const [invoiceData, setInvoiceData] = useState({});
+  const [standardComponents, setStandardComponents] = useState([]);
   const invoiceRef = useRef(null);
 
   const userId = sessionStorage.getItem('userid');
@@ -25,6 +27,9 @@ const ConfirmOrder = () => {
       invoiceNumber: 'X9AT6-240' + (myQuantity || 'N/A'),
       orderedQty: myQuantity,
     });
+
+    const storedComponents = JSON.parse(sessionStorage.getItem('standardComponents')) || [];
+    setStandardComponents(storedComponents);
   }, [userId, myQuantity]);
 
   const basePriceTotal = parseFloat(basePrice) * myQuantity;
@@ -33,19 +38,25 @@ const ConfirmOrder = () => {
   const gstRate = 0.28;
   const gstAmount = totalWithoutGST * gstRate;
   const totalWithGST = totalWithoutGST + gstAmount;
-/*
+
   const handleDownload = () => {
-    html2canvas(invoiceRef.current).then((canvas) => {
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF();
-      
-      pdf.addImage(imgData, 'PNG', 15, 10, 180, 160);
+    html2canvas(invoiceRef.current, { scale: 1.5 }).then((canvas) => {
+      const imgData = canvas.toDataURL('image/jpeg', 0.5);
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: 'a4',
+        compress: true,
+      });
+
+      pdf.addImage(imgData, 'JPEG', 15, 10, 180, 160, undefined, 'FAST');
       const time = new Date().getHours() + '' + new Date().getMinutes() + new Date().getSeconds();
       const pdfName = 'invoice' + userId + time;
-      const abspdfpath="C:/Users/Lenovo/Downloads/"+pdfName+".pdf";
+     
       pdf.save(pdfName);
-      console.log(abspdfpath);
-      console.log(pdfName);
+
+      const abspdfpath = `C:/Users/Lenovo/Downloads/${pdfName}.pdf`;
+
       setTimeout(() => {
         fetch('http://localhost:8080/api/email/mailInvoice', {
           method: 'POST',
@@ -60,46 +71,9 @@ const ConfirmOrder = () => {
         .then(response => response.json())
         .then(data => console.log('Email sent:', data))
         .catch(error => console.error('Error sending email:', error));
-      }, 2000);
+      }, 1000);
     });
   };
-*/
-const handleDownload = () => {
-  html2canvas(invoiceRef.current, { scale: 1.5 }).then((canvas) => {
-    const imgData = canvas.toDataURL('image/jpeg', 0.5); // Reduce quality to 50%
-    const pdf = new jsPDF({
-      orientation: 'portrait',
-      unit: 'mm',
-      format: 'a4',
-      compress: true, // Enable compression
-    });
-    
-    pdf.addImage(imgData, 'JPEG', 15, 10, 180, 160, undefined, 'FAST'); // Use JPEG for better compression
-    const time = new Date().getHours() + '' + new Date().getMinutes() + new Date().getSeconds();
-    const pdfName = 'invoice' + userId + time;
-   
-      const abspdfpath="C:/Users/Lenovo/Downloads/"+pdfName+".pdf";
-    pdf.save(pdfName);
-
-    setTimeout(() => {
-      fetch('http://localhost:8080/api/email/mailInvoice', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          sendTo: userData?.email,
-          path: abspdfpath,
-        }),
-      })
-      .then(response => response.json())
-      .then(data => console.log('Email sent:', data))
-      .catch(error => console.error('Error sending email:', error));
-    }, 1000);
-  });
-};
-
-
 
   return (
     <Container fluid>
@@ -112,6 +86,18 @@ const handleDownload = () => {
         <Row className="mb-4">
           <Col className="text-center">
             <div style={bannerStyle}>Invoice</div>
+            <div style={barcodeContainerStyle}>
+              <Barcode
+                value={`${userId}-${new Date().getTime()}`}
+                format="CODE39"
+                width={1.5}
+                height={50}
+                background="#ffffff" // Set background to white
+                lineColor="#000000"  // Set line color to black
+                displayValue={false}
+                style={barcodeStyle} // Ensure this style is applied
+              />
+            </div>
           </Col>
         </Row>
 
@@ -171,13 +157,37 @@ const handleDownload = () => {
             )}
           </Col>
         </Row>
-<hr></hr>
+        <hr></hr>
         <Row className="mb-4">
-          <Col>
+          <Col md={6}>
             <table className="table">
               <thead>
                 <tr>
-                  <th>Item</th>
+                  <th>#</th>
+                  <th>Standard Component</th>
+                </tr>
+              </thead>
+              <tbody>
+                {standardComponents.length > 0 ? (
+                  standardComponents.map((item, index) => (
+                    <tr key={item.comp_id}>
+                      <td>{index + 1}</td>
+                      <td>{item.comp_name}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="2">No standard components found</td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </Col>
+          <Col md={6}>
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Alternative Component</th>
                   <th>Price</th>
                   <th>Quantity</th>
                 </tr>
@@ -193,7 +203,7 @@ const handleDownload = () => {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan="3">No items found</td>
+                    <td colSpan="3">No alternative components found</td>
                   </tr>
                 )}
                 <tr>
@@ -217,14 +227,14 @@ const handleDownload = () => {
             </table>
           </Col>
         </Row>
-
       </div>
-
-      <Row className="mb-4">
-        <Col className="text-center">
-          <Button variant="secondary" onClick={handleDownload}>Download and Email PDF</Button>
-        </Col>
-      </Row>
+    
+      <div style={buttonContainerStyle}>
+        <Button variant="primary" onClick={handleDownload}>
+          Download & Email Invoice
+        </Button>
+      </div>
+     
     </Container>
   );
 };
@@ -233,24 +243,43 @@ const handleDownload = () => {
 const containerStyle = {
   padding: '20px',
   width: '80%',
-  maxWidth: '1000px',
-  border: '1px solid black',
+  maxWidth: '800px',
+  border: '1px solid #ddd',
+  borderRadius: '8px',
   backgroundColor: '#fff',
   margin: 'auto',
 };
 
 const logoStyle = {
-  width: '150px',
+  width: '120px',
+  display: 'block',
+  margin: 'auto',
+};
+
+const barcodeContainerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  marginTop: '10px',
+};
+
+const barcodeStyle = {
+  width: '200px',
+  height: '50px',
 };
 
 const bannerStyle = {
-  fontSize: '25px',
+  fontSize: '24px',
   fontWeight: 'bold',
   padding: '10px',
   backgroundColor: '#f0f0f0',
-  border: '1px solid black',
+  border: '1px solid #ddd',
   textAlign: 'center',
   marginBottom: '20px',
+};
+
+const buttonContainerStyle = {
+  textAlign: 'center',
+  marginTop: '20px',
 };
 
 export default ConfirmOrder;

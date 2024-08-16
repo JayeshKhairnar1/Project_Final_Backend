@@ -1,99 +1,170 @@
-import React from 'react';
-import { Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
-import { Link, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import bg001 from '../assets/Login Page Images/log.jpg'; // Your background image
+import React, { useEffect, useRef, useState } from 'react';
+import { Button, Container, Row, Col } from 'react-bootstrap';
+import { jsPDF } from 'jspdf';
+import html2canvas from 'html2canvas';
+import { useLocation } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../assets/Extra Images/VitaLogo.png';
 
-const CustomNavbar = () => {
+const InvoicePage = () => {
+  const invoiceRef = useRef();
   const location = useLocation();
-  const { t, i18n } = useTranslation();
+  const { invoiceData } = location.state || {};
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  // State to store user data
+  const [userData, setUserData] = useState(null);
+
+  // Retrieve userId from session storage
+  const userId = sessionStorage.getItem('userid');
+
+  // Fetch user data from API on page load
+  useEffect(() => {
+    fetch(`http://localhost:8080/api/user/userForInvoice/${userId}`)
+      .then(response => response.json())
+      .then(data => setUserData(data))
+      .catch(error => console.error('Error fetching user data:', error));
+  }, [userId]);
+
+  const handlePrint = () => {
+    html2canvas(invoiceRef.current, { scale: 2 }).then((canvas) => {
+      const imgData = canvas.toDataURL('image/jpeg', 0.5); // Reduce quality for smaller size
+      const pdf = new jsPDF();
+
+      // Adjust the image size and position as needed
+      pdf.addImage(imgData, 'JPEG', 15, 10, 180, 160, '', 'FAST'); // Use 'FAST' for compression
+
+      const time = new Date().getHours() + '' + new Date().getMinutes() + new Date().getSeconds();
+      const pdfName = 'invoice' + userId + time;
+      const abspdfpath="C:/Users/Lenovo/Downloads/"+pdfName+".pdf";
+      pdf.save(pdfName);
+      console.log(abspdfpath);
+      console.log(pdfName);
+
+      // Delay API call by 2 seconds
+      setTimeout(() => {
+        // API call to send the email with the invoice
+        fetch('http://localhost:8080/api/email/mailInvoice', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            sendTo: userData?.email,
+            path: abspdfpath // Send the PDF name
+          }),
+        })
+          .then(response => response.json())
+          .then(data => console.log('Email sent:', data))
+          .catch(error => console.error('Error sending email:', error));
+      }, 1000);
+    });
   };
 
-  const itemList = [
-    { text: t('navbarHome'), to: '/' },
-    { text: t('navbarAbout'), to: '/about' },
-    { text: t('navbarContact'), to: '/contact' },
-    { text: t('navbarLogin'), to: '/login' },
-    { text: t('navbarRegister'), to: '/register' }
-  ];
+  const containerStyle = {
+    padding: '20px',
+    width: '1000px',
+    border: '1px solid black',
+    position: 'relative',
+    backgroundColor: '#fff',
+    margin: 'auto',
+  };
+
+  const logoStyle = {
+    width: '150px',
+  };
+
+  const bannerStyle = {
+    fontSize: '25px',
+    fontWeight: 'bold',
+    padding: '10px',
+    backgroundColor: '#f0f0f0',
+    border: '1px solid black',
+    textAlign: 'center',
+    marginBottom: '20px',
+  };
+
+  const listContainerStyle = {
+    border: '1px solid black', // Single border around the entire list
+    padding: '10px',
+    marginBottom: '20px',
+    backgroundColor: '#f9f9f9',
+  };
+
+  const listStyle = {
+    listStyleType: 'none',
+    padding: '0',
+    margin: '0', // Remove margin for a cleaner look inside the border
+  };
+
+  const listItemStyle = {
+    padding: '5px 0', // Space between items
+  };
+
+  const buttonContainerStyle = {
+    textAlign: 'center',
+    marginTop: '20px',
+  };
 
   return (
-    <div
-      style={{
-        backgroundImage: `url(${bg001})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        filter: 'blur(5px)', // Adjust blur intensity here
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: '-1', // Ensure the background stays behind content
-      }}
-    >
-      <div
-        style={{
-          backdropFilter: 'blur(5px)', // Blurs the content slightly
-          height: '100vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-        }}
-      >
-        <Navbar bg="dark" variant="dark" sticky="top">
-          <Container>
-            <Navbar.Brand as={Link} to="/">
-              V-Config
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="ms-auto">
-                {itemList.map((item) => {
-                  const { text, to } = item;
-                  const isActive = location.pathname === to;
-
-                  return (
-                    <Nav.Link
-                      key={text}
-                      as={Link}
-                      to={to}
-                      style={{
-                        color: isActive ? '#fff' : '#ccc',
-                        borderBottom: isActive ? '2px solid #fff' : 'none',
-                        textDecoration: 'none',
-                        margin: '0 1rem',
-                      }}
-                      onMouseOver={(e) => e.currentTarget.style.color = '#fff'}
-                      onMouseOut={(e) => e.currentTarget.style.color = isActive ? '#fff' : '#ccc'}
-                    >
-                      {text}
-                    </Nav.Link>
-                  );
-                })}
-
-                <Dropdown>
-                  <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                    Language
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item onClick={() => changeLanguage('mr')}>मराठी</Dropdown.Item>
-                    <Dropdown.Item onClick={() => changeLanguage('en')}>English</Dropdown.Item>
-                    <Dropdown.Item onClick={() => changeLanguage('hi')}>हिंदी</Dropdown.Item>
-                    <Dropdown.Item onClick={() => changeLanguage('de')}>Deutsch</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
+    <Container fluid>
+      <div ref={invoiceRef} style={containerStyle}>
+        <Row className="mb-4">
+          <Col className="text-center">
+            <img src={logo} alt="Logo" style={logoStyle} />
+          </Col>
+        </Row>
+        <Row className="mb-4">
+          <Col className="text-center">
+            <div style={bannerStyle}>Invoice</div>
+          </Col>
+        </Row>
+        <Row className="mb-4">
+          <Col md={6}>
+            <p><strong>User ID:</strong> {userId}</p>
+            {userData && (
+              <>
+                <p><strong>Username:</strong> {userData.username}</p>
+                <p><strong>Company Name:</strong> {userData.company_name}</p>
+              </>
+            )}
+          </Col>
+          <Col md={6}>
+            <p><strong>Invoice Date:</strong> {invoiceData?.invoiceDate || new Date().toLocaleDateString()}</p>
+            <p><strong>Invoice Number:</strong> {invoiceData?.invoiceNumber || 'SWFT-240'+invoiceData?.orderedQty || 'N/A'}</p>
+            <p><strong>Quantity:</strong> {invoiceData?.orderedQty || 'N/A'}</p>
+          </Col>
+        </Row>
+        <hr />
+        <div style={{ paddingBottom: '20px', marginTop: '10px', fontWeight: 'bold', fontSize: '20px' }}>
+         Standard Components:
+        </div>
+        <Row className="mb-4">
+          <Col>
+            <div style={listContainerStyle}>
+              <ul style={listStyle}>
+                {invoiceData?.components?.map((component, index) => (
+                  <li key={index} style={listItemStyle}>
+                    {index + 1}. {component.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div style={{ borderTop: '1px solid black', paddingTop: '10px', marginTop: '10px', fontWeight: 'bold' }}>
+              Basic Amount: ₹ {invoiceData?.totalPrice || '0.00'}<br />
+              Tax: ₹ {((invoiceData?.totalPrice) * 1.28) - invoiceData?.totalPrice || '0.00'}<br />
+              Total: ₹{(invoiceData?.totalPrice * 1.28) || '0.00'} <br />
+              <small style={{ color: 'red' }}>*Including 28% GST on basic amount of ₹{invoiceData?.totalPrice}</small>
+            </div>
+          </Col>
+        </Row>
       </div>
-    </div>
+      <div style={buttonContainerStyle}>
+        <Button variant="primary" onClick={handlePrint}>
+          Download & Email Invoice
+        </Button>
+      </div>
+    </Container>
   );
 };
 
-export default CustomNavbar;
+export default InvoicePage;

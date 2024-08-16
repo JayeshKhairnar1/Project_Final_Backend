@@ -1,12 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DotNetProject.Models;
+using DotNetProject.Services;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using DotNetProject.Services;
 
 namespace DotNetProject.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
+    [ApiController]
+    [Produces("application/json")]
     public class VehicleController : ControllerBase
     {
         private readonly IVehicle _vehicleService;
@@ -16,45 +18,39 @@ namespace DotNetProject.Controllers
             _vehicleService = vehicleService;
         }
 
-        [HttpGet("components/{compType}/{modid}")]
-        public async Task<IActionResult> GetComponentsByModelId(string compType, long modid)
+        [HttpGet("{compType}/{modId}")]
+        public async Task<IActionResult> GetCompByModelID(char compType, long modId)
         {
             try
             {
-                var components = await _vehicleService.GetCompByModelIDAsync(modid, compType);
+                var components = await _vehicleService.GetCompByModelID(modId, compType);
+                if (components == null || components.Count == 0)
+                {
+                    return NotFound("No components found.");
+                }
                 return Ok(components);
             }
-            catch
+            catch (System.Exception ex)
             {
-                return StatusCode(500, "An error occurred while processing your request.");
+                return BadRequest(new { message = ex.Message });
             }
         }
 
-        [HttpGet("configurable/{id}/{isConfigurable}")]
-        public async Task<IActionResult> GetConfigurableComponentsByModelId(long id, string isConfigurable)
-        {
-            try
-            {
-                var components = await _vehicleService.GetConfigurableComponentsAsync(id, isConfigurable);
-                return Ok(components);
-            }
-            catch
-            {
-                return StatusCode(500, "An error occurred while processing your request.");
-            }
-        }
-
-        [HttpGet("details/{modId}")]
+        [HttpGet("{modId:int}")]
         public async Task<IActionResult> GetVehicleDataUsingModelId(int modId)
         {
             try
             {
-                var vehicleDetails = await _vehicleService.GetVehicleDataUsingModelIdAsync(modId);
+                var vehicleDetails = await _vehicleService.GetVehicleDataUsingModelId(modId);
+                if (vehicleDetails == null || vehicleDetails.Count == 0)
+                {
+                    return NotFound("No vehicles found.");
+                }
                 return Ok(vehicleDetails);
             }
-            catch
+            catch (System.Exception ex)
             {
-                return StatusCode(500, "An error occurred while processing your request.");
+                return BadRequest(new { message = ex.Message });
             }
         }
     }

@@ -64,17 +64,28 @@ const Configure1 = () => {
       fetchPriceData();
     }
   }, [modelId]);
-
+//http://localhost:5248/api/Vehicle/S/1
   const fetchItems = async (category) => {
     let urls = [];
-    if (category === 'S') {
+   /* Java :
+      if (category === 'S') {
       urls = [
        `http://localhost:8080/api/vehicles/S/${modelId}`,
         `http://localhost:8080/api/vehicles/I/${modelId}`,
         `http://localhost:8080/api/vehicles/E/${modelId}`
-      ];
+      ];*/
+
+      if (category === 'S') {
+        urls = [
+         `http://localhost:5248/api/Vehicle/S/${modelId}`,
+          `http://localhost:5248/api/Vehicle/I/${modelId}`,
+          `http://localhost:5248/api/Vehicle/E/${modelId}`
+        ];
+
+
     } else {
-      urls = [`http://localhost:8080/api/vehicles/${category}/${modelId}`];
+     // urls = [`http://localhost:8080/api/vehicles/${category}/${modelId}`];
+     urls = [`http://localhost:5248/api/Vehicle/${category}/${modelId}`];
     }
 
     try {

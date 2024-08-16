@@ -27,7 +27,8 @@ const Configure2 = () => {
 
   const fetchVehicleDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/cars/${modelId}`);
+     // const response = await fetch(`http://localhost:8080/api/cars/${modelId}`);
+     const response = await fetch(`http://localhost:5248/api/cars/${modelId}`);
       const data = await response.json();
       setVehicleDetails(data);
     } catch (error) {
@@ -37,41 +38,48 @@ const Configure2 = () => {
 
   const fetchItems = async (category) => {
     let urls = [];
-  
+    
     if (category === 'S') {
-      urls = [
-        `http://localhost:8080/api/vehicles/S/${modelId}`,
-        `http://localhost:8080/api/vehicles/I/${modelId}`,
-        `http://localhost:8080/api/vehicles/E/${modelId}`
-      ];
+        urls = [
+            `http://localhost:5248/api/Vehicle/S/${modelId}`,
+            `http://localhost:5248/api/Vehicle/I/${modelId}`,
+            `http://localhost:5248/api/Vehicle/E/${modelId}`
+        ];
     } else {
-      urls = [`http://localhost:8080/api/vehicles/${category}/${modelId}`];
+        urls = [`http://localhost:5248/api/Vehicle/${category}/${modelId}`];
     }
-  
+
     try {
-      const responses = await Promise.all(urls.map(url => fetch(url)));
-      const data = await Promise.all(responses.map(res => res.json()));
-      const combinedData = data.flat();
-      
-      const itemsWithDropdowns = await Promise.all(combinedData.map(async item => {
-        if (item.is_configurable === 'Y') {
-          const dropdownOptions = await fetchDropdownOptions(modelId, item.comp_id);
-          return {
-            ...item,
-            dropdownOptions,
-          };
+        const responses = await Promise.all(urls.map(url => fetch(url)));
+        const data = await Promise.all(responses.map(res => res.json()));
+        const combinedData = data.flat();
+        
+        // Store standard components in session storage
+        if (category === 'S') {
+            sessionStorage.setItem('standardComponents', JSON.stringify(combinedData));
         }
-        return item;
-      }));
-  
-      setItems(itemsWithDropdowns);
+
+        const itemsWithDropdowns = await Promise.all(combinedData.map(async item => {
+            if (item.is_configurable === 'Y') {
+                const dropdownOptions = await fetchDropdownOptions(modelId, item.comp_id);
+                return {
+                    ...item,
+                    dropdownOptions,
+                };
+            }
+            return item;
+        }));
+
+        setItems(itemsWithDropdowns);
     } catch (error) {
-      console.error('Error fetching items:', error);
+        console.error('Error fetching items:', error);
     }
-  };
+};
+
 
   const fetchDropdownOptions = async (modelId, compId) => {
     try {
+      // const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/${compId}`);
       const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/${compId}`);
       const data = await response.json();
       return data.map(option => ({
@@ -86,7 +94,9 @@ const Configure2 = () => {
 
   const fetchAccessoryOptions = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/108`);
+      
+     // const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/108`);
+     const response = await fetch(`http://localhost:5248/api/alternate/${modelId}/108`);
       const data = await response.json();
       const options = data.map(option => ({
         id: option.alt_comp_id,

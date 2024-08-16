@@ -1,31 +1,65 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text.Json.Serialization;
 
-namespace DotNetProject.Models;
-
-public partial class User
+namespace DotNetProject.Models
 {
-    public string Userid { get; set; } = null!;
+    [Table("user")]
+    public partial class User
+    {
+        private static readonly Random _random = new Random();
 
-    public string? AddressLine1 { get; set; }
+        [JsonPropertyName("userid")]
+        public string Userid
+        {
+            get => _userid;
+            set
+            {
+                // If the new value is null or empty, generate a random Userid
+                _userid = string.IsNullOrEmpty(value) ? GenerateRandomUserId() : value;
+            }
+        }
 
-    public string? AddressLine2 { get; set; }
+        private string _userid = GenerateRandomUserId(); // Initial Userid
 
-    public string? City { get; set; }
+        [JsonPropertyName("address_line1")]
+        public string? AddressLine1 { get; set; }
 
-    public string? CompanyName { get; set; }
+        [JsonPropertyName("address_line2")]
+        public string? AddressLine2 { get; set; }
 
-    public string? Email { get; set; }
+        [JsonPropertyName("city")]
+        public string? City { get; set; }
 
-    public string? GstNumber { get; set; }
+        [JsonPropertyName("company_name")]
+        public string? CompanyName { get; set; }
 
-    public string? Password { get; set; }
+        [JsonPropertyName("email")]
+        public string? Email { get; set; }
 
-    public string? PinCode { get; set; }
+        [JsonPropertyName("gst_number")]
+        public string? GstNumber { get; set; }
 
-    public string? State { get; set; }
+        [JsonPropertyName("password")]
+        public string? Password { get; set; }
 
-    public string? Telephone { get; set; }
+        [JsonPropertyName("pin_code")]
+        public string? PinCode { get; set; }
 
-    public string? Username { get; set; }
+        [JsonPropertyName("state")]
+        public string? State { get; set; }
+
+        [JsonPropertyName("telephone")]
+        public string? Telephone { get; set; }
+
+        [JsonPropertyName("username")]
+        public string? Username { get; set; }
+
+        private static string GenerateRandomUserId()
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Range(1, 10).Select(_ => chars[_random.Next(chars.Length)]).ToArray());
+        }
+    }
 }

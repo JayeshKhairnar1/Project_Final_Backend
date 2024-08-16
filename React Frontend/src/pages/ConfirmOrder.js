@@ -17,7 +17,8 @@ const ConfirmOrder = () => {
   const myQuantity = JSON.parse(sessionStorage.getItem('myQuantity')) || 1;
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/user/userForInvoice/${userId}`)
+    //java http://localhost:8080/api/user/userForInvoice/${userId} 
+    fetch(`http://localhost:5248/api/User/userForInvoice/${userId}`)
       .then(response => response.json())
       .then(data => setUserData(data))
       .catch(error => console.error('Error fetching user data:', error));
@@ -56,9 +57,10 @@ const ConfirmOrder = () => {
       pdf.save(pdfName);
 
       const abspdfpath = `C:/Users/Lenovo/Downloads/${pdfName}.pdf`;
-
+        //
+        // Java http://localhost:8080/api/email/mailInvoice
       setTimeout(() => {
-        fetch('http://localhost:8080/api/email/mailInvoice', {
+        fetch('http://localhost:5248/api/Email/mailInvoice', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -187,7 +189,7 @@ const ConfirmOrder = () => {
             <table className="table">
               <thead>
                 <tr>
-                  <th>Alternative Component</th>
+                  <th> Original--> Modified Alternate </th>
                   <th>Price</th>
                   <th>Quantity</th>
                 </tr>

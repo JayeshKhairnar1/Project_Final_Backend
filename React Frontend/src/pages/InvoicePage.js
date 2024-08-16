@@ -16,7 +16,8 @@ const InvoicePage = () => {
   const userId = sessionStorage.getItem('userid');
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/user/userForInvoice/${userId}`)
+    //java http://localhost:8080/api/user/userForInvoice/${userId}  
+    fetch(`http://localhost:5248/api/User/userForInvoice/${userId}`)
       .then(response => response.json())
       .then(data => setUserData(data))
       .catch(error => console.error('Error fetching user data:', error));
@@ -34,7 +35,9 @@ const InvoicePage = () => {
       pdf.save(pdfName);
 
       setTimeout(() => {
-        fetch('http://localhost:8080/api/email/mailInvoice', {
+       
+        //java  http://localhost:8080/api/email/mailInvoice
+        fetch('http://localhost:5248/api/Email/mailInvoice', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

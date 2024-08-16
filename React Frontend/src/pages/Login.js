@@ -71,7 +71,9 @@ const LoginPage = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:8080/api/user/login?userid=${userid}&password=${password}`, {
+      //java http://localhost:8080/api/user/login?userid=${userid}&password=${password}
+      //
+      const response = await fetch(`http://localhost:5248/api/User/login?userid=${userid}&password=${password}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json'

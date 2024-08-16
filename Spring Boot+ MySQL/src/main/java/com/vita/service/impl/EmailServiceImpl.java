@@ -88,7 +88,7 @@ public class EmailServiceImpl implements EmailService {
     }
 
     
- /* ours---------
+ /* working from postman only---------
 	public String invoiceEmail(String toEmailId, String subject, String body, String path) {
 
 		MimeMessage mimeMessage = javaMailSender.createMimeMessage();

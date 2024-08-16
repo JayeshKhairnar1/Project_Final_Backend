@@ -46,8 +46,9 @@ const UserForm = () => {
             };
 
             try {
-                // Post data to the backend
-                const response = await fetch('http://localhost:8080/api/user/register', {
+                // java   'http://localhost:8080/api/user/register'
+              
+                const response = await fetch(`http://localhost:5248/api/User/register`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -59,9 +60,11 @@ const UserForm = () => {
                     setShowAlert(true);
 
                     // Call the email sign-up API after a delay of 2 seconds
+                    //java  http://localhost:8080/api/email/onSignUp
+                   
                     setTimeout(async () => {
                         try {
-                            const emailResponse = await fetch('http://localhost:8080/api/email/onSignUp', {
+                            const emailResponse = await fetch(' http://localhost:5248/api/email/onSignUp', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'

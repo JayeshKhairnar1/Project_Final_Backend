@@ -38,7 +38,13 @@ const Configure2 = () => {
 
   const fetchItems = async (category) => {
     let urls = [];
-    
+     /* Java :
+      if (category === 'S') {
+      urls = [
+       `http://localhost:8080/api/vehicles/S/${modelId}`,
+        `http://localhost:8080/api/vehicles/I/${modelId}`,
+        `http://localhost:8080/api/vehicles/E/${modelId}`
+      ];*/
     if (category === 'S') {
         urls = [
             `http://localhost:5248/api/Vehicle/S/${modelId}`,
@@ -46,6 +52,7 @@ const Configure2 = () => {
             `http://localhost:5248/api/Vehicle/E/${modelId}`
         ];
     } else {
+       // urls = [`http://localhost:8080/api/vehicles/${category}/${modelId}`];
         urls = [`http://localhost:5248/api/Vehicle/${category}/${modelId}`];
     }
 
@@ -80,7 +87,7 @@ const Configure2 = () => {
   const fetchDropdownOptions = async (modelId, compId) => {
     try {
       // const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/${compId}`);
-      const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/${compId}`);
+      const response = await fetch(`http://localhost:5248/api/alternate/${modelId}/${compId}`);
       const data = await response.json();
       return data.map(option => ({
         value: option.alt_comp_id,

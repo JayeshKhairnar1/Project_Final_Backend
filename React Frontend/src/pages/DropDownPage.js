@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Form, Row, Col, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import '../CSS/DropDownPage.css'; // Import the CSS file if needed
+import '../CSS/DropDownPage.css'; 
 
 const DropdownPage = () => {
     const navigate = useNavigate();
@@ -14,11 +14,106 @@ const DropdownPage = () => {
     const [manufacturers, setManufacturers] = useState([]);
     const [models, setModels] = useState([]);
     const [formData, setFormData] = useState([]);
-    const [myModelId, setMyModelId] = useState(null); // New state for myModelId
- 
-    useEffect(() => {
-       
-      //Java API  fetch('http://localhost:8080/api/segments/')
+    const [myModelId, setMyModelId] = useState(null); 
+
+
+useEffect(() => {
+    const fetchSegments = async () => {
+        try {
+            // Try fetching from the first API
+            const response = await fetch('http://localhost:5248/api/Segments');
+            if (!response.ok) {
+                throw new Error('Failed to fetch from the first API');
+            }
+            const data = await response.json();
+            setSegments(data);
+        } catch (error) {
+            console.error('First API failed, trying the second API:', error);
+            try {
+                // If the first API fails, try fetching from the second API
+                const response = await fetch('http://localhost:8080/api/segments/');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch from the second API');
+                }
+                const data = await response.json();
+                setSegments(data);
+            } catch (error) {
+                console.error('Both APIs failed:', error);
+            }
+        }
+    };
+
+    fetchSegments();
+}, []);
+
+
+useEffect(() => {
+    if (selectedSegment) {
+        const fetchManufacturers = async () => {
+            try {
+                // Try fetching from the first API
+                const response = await fetch(`http://localhost:5248/api/Manufacturer/${selectedSegment.id}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch from the first API');
+                }
+                const data = await response.json();
+                setManufacturers(data);
+            } catch (error) {
+                console.error('First API failed, trying the second API:', error);
+                try {
+                    // If the first API fails, try fetching from the second API
+                    const response = await fetch(`http://localhost:8080/api/manufacturers/${selectedSegment.id}`);
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch from the second API');
+                    }
+                    const data = await response.json();
+                    setManufacturers(data);
+                } catch (error) {
+                    console.error('Both APIs failed:', error);
+                }
+            }
+        };
+
+        fetchManufacturers();
+    }
+}, [selectedSegment]);
+
+
+useEffect(() => {
+    if (selectedManufacturer) {
+        const fetchModels = async () => {
+            try {
+                // Try fetching from the first API
+                const response = await fetch(`http://localhost:5248/api/models/${selectedSegment.id}/${selectedManufacturer.id}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch from the first API');
+                }
+                const data = await response.json();
+                setModels(data);
+            } catch (error) {
+                console.error('First API failed, trying the second API:', error);
+                try {
+                    // If the first API fails, try fetching from the second API
+                    const response = await fetch(`http://localhost:8080/api/models/${selectedSegment.id}/${selectedManufacturer.id}`);
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch from the second API');
+                    }
+                    const data = await response.json();
+                    setModels(data);
+                } catch (error) {
+                    console.error('Both APIs failed:', error);
+                }
+            }
+        };
+
+        fetchModels();
+    }
+}, [selectedManufacturer, selectedSegment]);
+
+
+/*
+
+//Java API  fetch('http://localhost:8080/api/segments/')
       fetch('http://localhost:5248/api/Segments')
             .then(response => response.json())
             .then(data => {
@@ -27,6 +122,9 @@ const DropdownPage = () => {
             .catch(error => console.error('Error fetching segments:', error));
     }, []);
 
+*/
+
+/*
     useEffect(() => {
         if (selectedSegment) {
             //Java API    fetch(`http://localhost:8080/api/manufacturers/${selectedSegment.id}`)
@@ -39,7 +137,10 @@ const DropdownPage = () => {
                 .catch(error => console.error('Error fetching manufacturers:', error));
         }
     }, [selectedSegment]);
+*/
 
+
+/*
     useEffect(() => {
         if (selectedManufacturer) {
             // Fetch models based on selected manufacturer
@@ -52,8 +153,12 @@ const DropdownPage = () => {
                 .catch(error => console.error('Error fetching models:', error));
         }
     }, [selectedManufacturer]);
-
+*/
     // UseEffect to log formData when it changes
+
+
+
+
   useEffect(() => {
     console.log('Form Data:', formData);
   }, [formData]);
@@ -236,7 +341,7 @@ const DropdownPage = () => {
                                 justifyContent: 'center',
                                 alignItems: 'center'
                             }}
-                            onClick={handleNextButtonClick} // Handle button click
+                            onClick={handleNextButtonClick} 
                         >
                             <span style={{
                                 marginRight: '8px'

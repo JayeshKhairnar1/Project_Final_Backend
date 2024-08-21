@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Button, Form, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Button, Form, Alert, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import bg001 from '../assets/Login Page Images/log.jpg';
-import '../CSS/UserForm.css'; // Import the CSS file
+import '../CSS/UserForm.css';
 
 const UserForm = () => {
     const [validated, setValidated] = useState(false);
@@ -23,14 +23,30 @@ const UserForm = () => {
     });
     const navigate = useNavigate();
 
-    // Handle form submission
+    const validateEmail = (email) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         const form = event.currentTarget;
+
+        if (!validateEmail(formData.email)) {
+            event.stopPropagation();
+            setValidated(true);
+            return;
+        }
+
+        if (formData.password !== formData.confirmPassword) {
+            event.stopPropagation();
+            setValidated(true);
+            return;
+        }
+
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
-            // Create JSON data from form fields
             const data = {
                 username: formData.name,
                 address_line1: formData.addressLine1,
@@ -46,8 +62,6 @@ const UserForm = () => {
             };
 
             try {
-                // java   'http://localhost:8080/api/user/register'
-              
                 const response = await fetch(`http://localhost:5248/api/User/register`, {
                     method: 'POST',
                     headers: {
@@ -58,13 +72,9 @@ const UserForm = () => {
 
                 if (response.ok) {
                     setShowAlert(true);
-
-                    // Call the email sign-up API after a delay of 2 seconds
-                    //java  http://localhost:8080/api/email/onSignUp
-                   
                     setTimeout(async () => {
                         try {
-                            const emailResponse = await fetch(' http://localhost:5248/api/email/onSignUp', {
+                            const emailResponse = await fetch('http://localhost:5248/api/email/onSignUp', {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'
@@ -84,7 +94,6 @@ const UserForm = () => {
                         }
                     }, 2000);
                 } else {
-                    // Handle errors
                     console.error('Registration failed');
                 }
             } catch (error) {
@@ -94,7 +103,6 @@ const UserForm = () => {
         setValidated(true);
     };
 
-    // Handle form reset
     const handleReset = () => {
         setValidated(false);
         setShowAlert(false);
@@ -114,7 +122,6 @@ const UserForm = () => {
         });
     };
 
-    // Handle form input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -129,6 +136,12 @@ const UserForm = () => {
         }
     }, [showAlert]);
 
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+            This field is required.
+        </Tooltip>
+    );
+
     return (
         <Container fluid className="container-fluid-custom" style={{ backgroundImage: `url(${bg001})` }}>
             <Row className="justify-content-center">
@@ -140,15 +153,17 @@ const UserForm = () => {
                             <Col md={12}>
                                 <Form.Group controlId="formName">
                                     <Form.Label>Name</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter name" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter name" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid name.
                                     </Form.Control.Feedback>
@@ -159,15 +174,18 @@ const UserForm = () => {
                             <Col md={12}>
                                 <Form.Group controlId="formEmail">
                                     <Form.Label>Email Address</Form.Label>
-                                    <Form.Control 
-                                        type="email" 
-                                        placeholder="Enter email" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="email" 
+                                            placeholder="Enter email" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            isInvalid={validated && !validateEmail(formData.email)}
+                                        />
+                                    </OverlayTrigger>
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid email address.
                                     </Form.Control.Feedback>
@@ -178,15 +196,17 @@ const UserForm = () => {
                             <Col md={6}>
                                 <Form.Group controlId="formPassword">
                                     <Form.Label>Password</Form.Label>
-                                    <Form.Control 
-                                        type="password" 
-                                        placeholder="Enter password" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="password"
-                                        value={formData.password}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="password" 
+                                            placeholder="Enter password" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="password"
+                                            value={formData.password}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a password.
                                     </Form.Control.Feedback>
@@ -195,17 +215,22 @@ const UserForm = () => {
                             <Col md={6}>
                                 <Form.Group controlId="formConfirmPassword">
                                     <Form.Label>Confirm Password</Form.Label>
-                                    <Form.Control 
-                                        type="password" 
-                                        placeholder="Confirm password" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="confirmPassword"
-                                        value={formData.confirmPassword}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="password" 
+                                            placeholder="Confirm password" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="confirmPassword"
+                                            value={formData.confirmPassword}
+                                            onChange={handleChange}
+                                            isInvalid={validated && formData.password !== formData.confirmPassword}
+                                        />
+                                    </OverlayTrigger>
                                     <Form.Control.Feedback type="invalid">
-                                        Password confirmation is required.
+                                        {formData.password !== formData.confirmPassword 
+                                            ? 'Passwords do not match.' 
+                                            : 'Password confirmation is required.'}
                                     </Form.Control.Feedback>
                                 </Form.Group>
                             </Col>
@@ -215,100 +240,116 @@ const UserForm = () => {
                             <Col md={6} style={{ paddingRight: '0.5rem' }}>
                                 <Form.Group controlId="formCompanyName" className="mb-3">
                                     <Form.Label>Company Name</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter company name" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="companyName"
-                                        value={formData.companyName}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter company name" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="companyName"
+                                            value={formData.companyName}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                 </Form.Group>
                                 <Form.Group controlId="formAddressLine1" className="mb-3">
                                     <Form.Label>Address Line 1</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter address line 1" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="addressLine1"
-                                        value={formData.addressLine1}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter address line 1" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="addressLine1"
+                                            value={formData.addressLine1}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                 </Form.Group>
                                 <Form.Group controlId="formCity" className="mb-3">
                                     <Form.Label>City</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter city" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="city"
-                                        value={formData.city}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter city" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="city"
+                                            value={formData.city}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                 </Form.Group>
                                 <Form.Group controlId="formPinCode" className="mb-3">
                                     <Form.Label>Pin Code</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter pin code" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="pinCode"
-                                        value={formData.pinCode}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter pin code" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="pinCode"
+                                            value={formData.pinCode}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                 </Form.Group>
                             </Col>
                             <Col md={6} style={{ paddingLeft: '0.5rem' }}>
                                 <Form.Group controlId="formAddressLine2" className="mb-3">
                                     <Form.Label>Address Line 2</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter address line 2" 
-                                        className="form-control-custom"
-                                        name="addressLine2"
-                                        value={formData.addressLine2}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter address line 2" 
+                                            className="form-control-custom"
+                                            name="addressLine2"
+                                            value={formData.addressLine2}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                 </Form.Group>
                                 <Form.Group controlId="formState" className="mb-3">
                                     <Form.Label>State</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter state" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="state"
-                                        value={formData.state}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter state" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="state"
+                                            value={formData.state}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                 </Form.Group>
                                 <Form.Group controlId="formTelephone" className="mb-3">
                                     <Form.Label>Telephone</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter telephone" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="telephone"
-                                        value={formData.telephone}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter telephone" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="telephone"
+                                            value={formData.telephone}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                 </Form.Group>
                                 <Form.Group controlId="formGstNumber" className="mb-3">
                                     <Form.Label>GST Number</Form.Label>
-                                    <Form.Control 
-                                        type="text" 
-                                        placeholder="Enter GST number" 
-                                        required 
-                                        className="form-control-custom"
-                                        name="gstNumber"
-                                        value={formData.gstNumber}
-                                        onChange={handleChange}
-                                    />
+                                    <OverlayTrigger placement="right" overlay={renderTooltip}>
+                                        <Form.Control 
+                                            type="text" 
+                                            placeholder="Enter GST number" 
+                                            required 
+                                            className="form-control-custom"
+                                            name="gstNumber"
+                                            value={formData.gstNumber}
+                                            onChange={handleChange}
+                                        />
+                                    </OverlayTrigger>
                                 </Form.Group>
                             </Col>
                         </Row>

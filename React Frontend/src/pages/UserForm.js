@@ -62,7 +62,8 @@ const UserForm = () => {
             };
 
             try {
-                const response = await fetch(`http://localhost:5248/api/User/register`, {
+                //http://localhost:5248/api/User/register
+                const response = await fetch(`http://localhost:8080/api/user/register`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -74,7 +75,8 @@ const UserForm = () => {
                     setShowAlert(true);
                     setTimeout(async () => {
                         try {
-                            const emailResponse = await fetch('http://localhost:5248/api/email/onSignUp', {
+                            //http://localhost:5248/api/email/onSignUp
+                            const emailResponse = await fetch(`http://localhost:8080/api/email/onSignUp`, {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json'

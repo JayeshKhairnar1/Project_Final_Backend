@@ -1,8 +1,6 @@
 package com.vita.controller;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,6 +26,8 @@ public class CarDescriptionController {
         List<CarDescription> cars = service.getAllCars();
         return new ResponseEntity<>(cars, HttpStatus.OK);
     }
+
+    /*
   //using mysql and spring boot
     @GetMapping("/{id}")
     public ResponseEntity<CarDescription> getCarById(@PathVariable("id") Long id) {
@@ -35,13 +35,17 @@ public class CarDescriptionController {
         return car.map(ResponseEntity::ok)
                   .orElseGet(() -> ResponseEntity.notFound().build());
     }
-}
-  /*
+
+
+*/
+    
+    
+  
     //using Dot Net SQL-Server DB and API
-     * 
+     
     @GetMapping("/{id}")
     public ResponseEntity<CarDescription> getCarById(@PathVariable("id") Long id) {
-        String url = "http://localhost:7223/api/CarDescriptions/" + id;
+        String url = "http://localhost:5248/api/cars/" + id;
         System.out.println("Fetching URL: " + url);
 
         try {
@@ -58,7 +62,8 @@ public class CarDescriptionController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
-*/
+    }
+
    
 
     

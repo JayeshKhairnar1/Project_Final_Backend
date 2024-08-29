@@ -17,8 +17,9 @@ const ConfirmOrder = () => {
   const myQuantity = JSON.parse(sessionStorage.getItem('myQuantity')) || 1;
 
   useEffect(() => {
-    //java http://localhost:8080/api/user/userForInvoice/${userId} 
-    fetch(`http://localhost:5248/api/User/userForInvoice/${userId}`)
+    //http://localhost:5248/api/User/userForInvoice/${userId}
+    //java  
+    fetch(`http://localhost:8080/api/user/userForInvoice/${userId}`)
       .then(response => response.json())
       .then(data => setUserData(data))
       .catch(error => console.error('Error fetching user data:', error));
@@ -57,10 +58,10 @@ const ConfirmOrder = () => {
       pdf.save(pdfName);
 
       const abspdfpath = `C:/Users/Lenovo/Downloads/${pdfName}.pdf`;
-        //
-        // Java http://localhost:8080/api/email/mailInvoice
+        //http://localhost:5248/api/Email/mailInvoice
+        // Java 
       setTimeout(() => {
-        fetch('http://localhost:5248/api/Email/mailInvoice', {
+        fetch('http://localhost:8080/api/email/mailInvoice', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -233,7 +234,7 @@ const ConfirmOrder = () => {
     
       <div style={buttonContainerStyle}>
         <Button variant="primary" onClick={handleDownload}>
-          Download & Email Invoice
+          Download Invoice
         </Button>
       </div>
      

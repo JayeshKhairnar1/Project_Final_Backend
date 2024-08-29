@@ -27,6 +27,7 @@ public class UserController {
     public ResponseEntity<String> createUser(@RequestBody User user) {
         try {
             userService.createUser(user);
+            
             return new ResponseEntity<>("User registered successfully", HttpStatus.CREATED);
         } catch (Exception e) {
             // Log the exception and return an error response

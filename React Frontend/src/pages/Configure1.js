@@ -26,8 +26,9 @@ const Configure1 = () => {
   useEffect(() => {
     const fetchCarData = async () => {
       try {
+        //http://localhost:5248/api/cars/${modelId}
         // Java API: const response = await fetch(`http://localhost:8080/api/cars/${modelId}
-        const response = await fetch(`http://localhost:5248/api/cars/${modelId}`);
+        const response = await fetch(`http://localhost:8080/api/cars/${modelId}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -48,8 +49,9 @@ const Configure1 = () => {
   useEffect(() => {
     const fetchPriceData = async () => {
       try {
+        //http://localhost:5248/api/models/details/${modelId}
         //Java API: http://localhost:5248/api/models/details/${modelId}
-        const response = await fetch(`http://localhost:5248/api/models/details/${modelId}`);
+        const response = await fetch(`http://localhost:8080/api/models/details/${modelId}`);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -67,25 +69,25 @@ const Configure1 = () => {
 //http://localhost:5248/api/Vehicle/S/1
   const fetchItems = async (category) => {
     let urls = [];
-   /* Java :
+   // Java :
       if (category === 'S') {
       urls = [
        `http://localhost:8080/api/vehicles/S/${modelId}`,
         `http://localhost:8080/api/vehicles/I/${modelId}`,
         `http://localhost:8080/api/vehicles/E/${modelId}`
-      ];*/
-
+      ];
+/*
       if (category === 'S') {
         urls = [
          `http://localhost:5248/api/Vehicle/S/${modelId}`,
           `http://localhost:5248/api/Vehicle/I/${modelId}`,
           `http://localhost:5248/api/Vehicle/E/${modelId}`
         ];
-
+*/
 
     } else {
-     // urls = [`http://localhost:8080/api/vehicles/${category}/${modelId}`];
-     urls = [`http://localhost:5248/api/Vehicle/${category}/${modelId}`];
+      urls = [`http://localhost:8080/api/vehicles/${category}/${modelId}`];
+    // urls = [`http://localhost:5248/api/Vehicle/${category}/${modelId}`];
     }
 
     try {

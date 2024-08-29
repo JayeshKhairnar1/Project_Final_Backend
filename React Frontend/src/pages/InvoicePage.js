@@ -16,11 +16,13 @@ const InvoicePage = () => {
   const userId = sessionStorage.getItem('userid');
 
   useEffect(() => {
-    //java http://localhost:8080/api/user/userForInvoice/${userId}  
-    fetch(`http://localhost:5248/api/User/userForInvoice/${userId}`)
+    //http://localhost:5248/api/User/userForInvoice/${userId}
+    
+    fetch(`http://localhost:8080/api/user/userForInvoice/${userId}  `)
       .then(response => response.json())
       .then(data => setUserData(data))
       .catch(error => console.error('Error fetching user data:', error));
+  
   }, [userId]);
 
   const handlePrint = () => {
@@ -35,9 +37,9 @@ const InvoicePage = () => {
       pdf.save(pdfName);
 
       setTimeout(() => {
-       
-        //java  http://localhost:8080/api/email/mailInvoice
-        fetch('http://localhost:5248/api/Email/mailInvoice', {
+       // Dot net http://localhost:5248/api/Email/mailInvoice
+        
+        fetch('http://localhost:8080/api/email/mailInvoice', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -115,6 +117,7 @@ const InvoicePage = () => {
 
   // Calculation of amounts
   const basicAmount = invoiceData?.totalPrice || 0;
+  console.log(basicAmount);
   const taxAmount = basicAmount * 0.28;
   const totalAmount = basicAmount + taxAmount;
 
@@ -182,7 +185,7 @@ const InvoicePage = () => {
       </div>
       <div style={buttonContainerStyle}>
         <Button variant="primary" onClick={handlePrint}>
-          Download & Email Invoice
+          Download Invoice
         </Button>
       </div>
     </Container>

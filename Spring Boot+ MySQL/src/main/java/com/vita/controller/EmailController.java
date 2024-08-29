@@ -22,6 +22,7 @@ public class EmailController {
     @PostMapping("/onSignUp")
     public String sendMail(@RequestBody EmailDetails emailDetails) {
         String email = emailDetails.getSendTo();
+        System.out.println("========================================"+email+"===============================================================");
         return emailService.loginEmail(email, SUBJECT, BODY);    
     }
     private static final String SUBJECT2 = "Your Purchase Was Successful!";

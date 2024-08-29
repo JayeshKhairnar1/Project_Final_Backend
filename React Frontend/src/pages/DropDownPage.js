@@ -20,8 +20,8 @@ const DropdownPage = () => {
 useEffect(() => {
     const fetchSegments = async () => {
         try {
-            // Try fetching from the first API
-            const response = await fetch('http://localhost:5248/api/Segments');
+            // Try fetching from the first API  
+            const response = await fetch('http://localhost:8080/api/segments/');
             if (!response.ok) {
                 throw new Error('Failed to fetch from the first API');
             }
@@ -31,7 +31,7 @@ useEffect(() => {
             console.error('First API failed, trying the second API:', error);
             try {
                 // If the first API fails, try fetching from the second API
-                const response = await fetch('http://localhost:8080/api/segments/');
+                const response = await fetch('http://localhost:5248/api/Segments');
                 if (!response.ok) {
                     throw new Error('Failed to fetch from the second API');
                 }
@@ -51,8 +51,8 @@ useEffect(() => {
     if (selectedSegment) {
         const fetchManufacturers = async () => {
             try {
-                // Try fetching from the first API
-                const response = await fetch(`http://localhost:5248/api/Manufacturer/${selectedSegment.id}`);
+                // Try fetching from the first API      
+                const response = await fetch(`http://localhost:8080/api/manufacturers/${selectedSegment.id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch from the first API');
                 }
@@ -62,7 +62,7 @@ useEffect(() => {
                 console.error('First API failed, trying the second API:', error);
                 try {
                     // If the first API fails, try fetching from the second API
-                    const response = await fetch(`http://localhost:8080/api/manufacturers/${selectedSegment.id}`);
+                    const response = await fetch(`http://localhost:5248/api/Manufacturer/${selectedSegment.id}`);
                     if (!response.ok) {
                         throw new Error('Failed to fetch from the second API');
                     }
@@ -83,8 +83,8 @@ useEffect(() => {
     if (selectedManufacturer) {
         const fetchModels = async () => {
             try {
-                // Try fetching from the first API
-                const response = await fetch(`http://localhost:5248/api/models/${selectedSegment.id}/${selectedManufacturer.id}`);
+                // Try fetching from the first API   
+                const response = await fetch(`http://localhost:8080/api/models/${selectedSegment.id}/${selectedManufacturer.id}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch from the first API');
                 }
@@ -94,7 +94,7 @@ useEffect(() => {
                 console.error('First API failed, trying the second API:', error);
                 try {
                     // If the first API fails, try fetching from the second API
-                    const response = await fetch(`http://localhost:8080/api/models/${selectedSegment.id}/${selectedManufacturer.id}`);
+                    const response = await fetch(`http://localhost:5248/api/models/${selectedSegment.id}/${selectedManufacturer.id}`);
                     if (!response.ok) {
                         throw new Error('Failed to fetch from the second API');
                     }

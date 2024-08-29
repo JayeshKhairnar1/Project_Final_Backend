@@ -27,8 +27,9 @@ const Configure2 = () => {
 
   const fetchVehicleDetails = async () => {
     try {
+      //http://localhost:5248/api/cars/${modelId}
      // const response = await fetch(`http://localhost:8080/api/cars/${modelId}`);
-     const response = await fetch(`http://localhost:5248/api/cars/${modelId}`);
+     const response = await fetch(`http://localhost:8080/api/cars/${modelId}`);
       const data = await response.json();
       setVehicleDetails(data);
     } catch (error) {
@@ -38,22 +39,26 @@ const Configure2 = () => {
 
   const fetchItems = async (category) => {
     let urls = [];
-     /* Java :
+     //Java :
       if (category === 'S') {
       urls = [
        `http://localhost:8080/api/vehicles/S/${modelId}`,
         `http://localhost:8080/api/vehicles/I/${modelId}`,
         `http://localhost:8080/api/vehicles/E/${modelId}`
-      ];*/
+      ];
+
+      /*
     if (category === 'S') {
         urls = [
             `http://localhost:5248/api/Vehicle/S/${modelId}`,
             `http://localhost:5248/api/Vehicle/I/${modelId}`,
             `http://localhost:5248/api/Vehicle/E/${modelId}`
         ];
+
+        */
     } else {
-       // urls = [`http://localhost:8080/api/vehicles/${category}/${modelId}`];
-        urls = [`http://localhost:5248/api/Vehicle/${category}/${modelId}`];
+        urls = [`http://localhost:8080/api/vehicles/${category}/${modelId}`];
+      //  urls = [`http://localhost:5248/api/Vehicle/${category}/${modelId}`];
     }
 
     try {
@@ -86,8 +91,8 @@ const Configure2 = () => {
 
   const fetchDropdownOptions = async (modelId, compId) => {
     try {
-      // const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/${compId}`);
-      const response = await fetch(`http://localhost:5248/api/alternate/${modelId}/${compId}`);
+       const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/${compId}`);
+    //  const response = await fetch(`http://localhost:5248/api/alternate/${modelId}/${compId}`);
       const data = await response.json();
       return data.map(option => ({
         value: option.alt_comp_id,
@@ -102,8 +107,8 @@ const Configure2 = () => {
   const fetchAccessoryOptions = async () => {
     try {
       
-     // const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/108`);
-     const response = await fetch(`http://localhost:5248/api/alternate/${modelId}/108`);
+      const response = await fetch(`http://localhost:8080/api/alternate/${modelId}/108`);
+     //const response = await fetch(`http://localhost:5248/api/alternate/${modelId}/108`);
       const data = await response.json();
       const options = data.map(option => ({
         id: option.alt_comp_id,
